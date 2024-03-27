@@ -10,7 +10,8 @@ namespace Inventory_management
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("uuuuuuu");
+            Item i1 = new Item();
+            Item i2 = new Item(1, "a", "b", 1, 10);
         }
     }
 }
