@@ -7,3 +7,4 @@ C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\In
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.pdb
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.Form1.resources
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.csproj.GenerateResource.cache
+C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.addItemForm.resources

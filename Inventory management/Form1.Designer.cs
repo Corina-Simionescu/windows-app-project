@@ -42,6 +42,7 @@
             this.buttonAddItem.TabIndex = 0;
             this.buttonAddItem.Text = "ADD ITEM";
             this.buttonAddItem.UseVisualStyleBackColor = true;
+            this.buttonAddItem.Click += new System.EventHandler(this.buttonAddItem_Click);
             // 
             // buttonRemoveItem
             // 
@@ -60,8 +61,9 @@
             this.buttonViewItems.Name = "buttonViewItems";
             this.buttonViewItems.Size = new System.Drawing.Size(231, 80);
             this.buttonViewItems.TabIndex = 2;
-            this.buttonViewItems.Text = "SEE ITEMS";
+            this.buttonViewItems.Text = "VIEW ITEMS";
             this.buttonViewItems.UseVisualStyleBackColor = true;
+            this.buttonViewItems.Click += new System.EventHandler(this.buttonViewItems_Click);
             // 
             // Form1
             // 

@@ -17,5 +17,15 @@ namespace Inventory_management
             InitializeComponent();
         }
 
+        private void buttonAddItem_Click(object sender, EventArgs e)
+        {
+            addItemForm form = new addItemForm();
+            form.ShowDialog();
+        }
+
+        private void buttonViewItems_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
