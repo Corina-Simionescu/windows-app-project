@@ -6,33 +6,25 @@ using System.Threading.Tasks;
 
 namespace Inventory_management
 {
-    internal class Operations
+    public class Operations
     {
-        private List<Item> items;
-
         public Operations()
         {
-            items = new List<Item>();
         }
 
-        public Operations(List<Item> items) 
-        {
-            this.items = items;
-        }
-
-        public void addItem(Item item)
+        public void addItem(List<Item> items, Item item)
         {
             items.Add(item);
         }
 
-        public void removeItem(Item item)
+        public void removeItem(List<Item> items, Item item)
         {
             items.Remove(item);
         }
 
-        public void printItems()
+        public void printItems(List<Item> items)
         {
-            foreach(Item item in items)
+            foreach (Item item in items)
             {
                 Console.WriteLine(item.ToString());
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inventory_management
 {
-    internal class Item
+    public class Item
     {
         private int id;
         private string name;

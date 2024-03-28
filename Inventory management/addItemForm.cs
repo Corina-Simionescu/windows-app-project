@@ -13,6 +13,7 @@ namespace Inventory_management
     public partial class addItemForm : Form
     {
         List<Item> items = new List<Item>();
+        Operations operations = new Operations();
 
         public addItemForm()
         {
@@ -31,9 +32,9 @@ namespace Inventory_management
 
                 Item item = new Item(id, name, description, quantity, price);
 
-                MessageBox.Show(item.ToString());
+                operations.addItem(items, item);
 
-                items.Add(item);
+                MessageBox.Show(item.ToString());
             }
             catch (Exception ex)
             {
@@ -51,8 +52,10 @@ namespace Inventory_management
 
         private void buttonGoBackToForm1_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            form.ShowDialog();
+            this.Hide();
+
+            Form1 form1 = new Form1(items);
+            form1.ShowDialog();
         }
     }
 }
