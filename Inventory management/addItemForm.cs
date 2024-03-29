@@ -85,7 +85,6 @@ namespace Inventory_management
             if(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8)
             {
                 e.Handled = false;
-
                 errorProviderFormAddItem.Clear();
             }
             else

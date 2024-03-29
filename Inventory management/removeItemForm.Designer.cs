@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelRemoveItemTitle = new System.Windows.Forms.Label();
             this.labelIndication = new System.Windows.Forms.Label();
             this.labelId = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonGoBackToForm1 = new System.Windows.Forms.Button();
+            this.errorProviderRemoveItemForm = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRemoveItemForm)).BeginInit();
             this.SuspendLayout();
             // 
             // labelRemoveItemTitle
@@ -77,6 +80,7 @@
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(196, 55);
             this.textBoxId.TabIndex = 3;
+            this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxId_KeyPress);
             // 
             // buttonRemove
             // 
@@ -102,6 +106,10 @@
             this.buttonGoBackToForm1.UseVisualStyleBackColor = true;
             this.buttonGoBackToForm1.Click += new System.EventHandler(this.buttonGoBackToForm1_Click);
             // 
+            // errorProviderRemoveItemForm
+            // 
+            this.errorProviderRemoveItemForm.ContainerControl = this;
+            // 
             // removeItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -116,6 +124,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "removeItemForm";
             this.Text = "removeItemForm";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRemoveItemForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +138,6 @@
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.Button buttonGoBackToForm1;
+        private System.Windows.Forms.ErrorProvider errorProviderRemoveItemForm;
     }
 }
