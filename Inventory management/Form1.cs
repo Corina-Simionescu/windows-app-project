@@ -12,16 +12,10 @@ namespace Inventory_management
 {
     public partial class Form1 : Form
     {
-        private List<Item> items;
+        public static List<Item> items = new List<Item>();
         public Form1()
         {
             InitializeComponent();
-            this.items = new List<Item>();
-        }
-        public Form1(List<Item> items)
-        {
-            InitializeComponent();
-            this.items = items;
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
@@ -29,12 +23,12 @@ namespace Inventory_management
             this.Hide();
 
             addItemForm form = new addItemForm();
-            form.ShowDialog();
+                form.ShowDialog();
         }
 
         private void buttonViewItems_Click(object sender, EventArgs e)
         {
-            displayItemsForm form = new displayItemsForm(items);
+            displayItemsForm form = new displayItemsForm();
             form.ShowDialog();
         }
 
@@ -42,7 +36,7 @@ namespace Inventory_management
         {
             this.Hide();
 
-            removeItemForm form = new removeItemForm(items);
+            removeItemForm form = new removeItemForm();
             form.ShowDialog();
         }
     }

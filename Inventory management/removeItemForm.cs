@@ -13,13 +13,9 @@ namespace Inventory_management
 {
     public partial class removeItemForm : Form
     {
-        List<Item> items;
-
-        public removeItemForm(List<Item> items)
+        public removeItemForm()
         {
             InitializeComponent();
-
-            this.items = items;
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
@@ -28,23 +24,23 @@ namespace Inventory_management
             {
                 int id = Convert.ToInt32(textBoxId.Text);
                 
-                if(!items.Any())
+                if(!Form1.items.Any())
                 {
                     MessageBox.Show("No item to remove because the inventory is empty");
                 }
                 else
                 {
                     int itemWasFound = 0;
-                    foreach(Item item in items)
+                    foreach(Item item in Form1.items)
                     {
                         if(id == item.Id)
                         {
-                            Operations operation = new Operations();
-                            MessageBox.Show("The following item was removed from inventory: " + Environment.NewLine);
-                            MessageBox.Show(item.ToString());
-                            operation.removeItem(items, item);
+                            MessageBox.Show("The following item was removed from inventory: " + Environment.NewLine + item.ToString());
+
+                            Operations.removeItem(Form1.items, item);
 
                             itemWasFound++;
+                            break;
                         }
                     }
 
@@ -57,6 +53,10 @@ namespace Inventory_management
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                textBoxId.Clear();
             }
         }
 

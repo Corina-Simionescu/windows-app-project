@@ -12,11 +12,11 @@ namespace Inventory_management
 {
     public partial class displayItemsForm : Form
     {
-        public displayItemsForm(List<Item> items)
+        public displayItemsForm()
         {
             InitializeComponent();
 
-            foreach (Item item in items)
+            foreach (Item item in Form1.items)
             {
                 textBoxDisplayItems.Text += item.ToString() + Environment.NewLine;
             }
