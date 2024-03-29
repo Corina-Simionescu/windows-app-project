@@ -34,9 +34,15 @@ namespace Inventory_management
 
         private void buttonViewItems_Click(object sender, EventArgs e)
         {
+            displayItemsForm form = new displayItemsForm(items);
+            form.ShowDialog();
+        }
+
+        private void buttonRemoveItem_Click(object sender, EventArgs e)
+        {
             this.Hide();
 
-            displayItemsForm form = new displayItemsForm(items);
+            removeItemForm form = new removeItemForm(items);
             form.ShowDialog();
         }
     }

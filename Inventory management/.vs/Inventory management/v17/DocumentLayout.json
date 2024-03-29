@@ -7,24 +7,8 @@
       "RelativeMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|solutionrelative:additemform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|c:\\users\\corin\\documents\\ase\\an 2\\semestrul 2\\paw\\proiect\\windows-app-project\\inventory management\\additemform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\additemform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|solutionrelative:additemform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|c:\\users\\corin\\documents\\ase\\an 2\\semestrul 2\\paw\\proiect\\windows-app-project\\inventory management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|c:\\users\\corin\\documents\\ase\\an 2\\semestrul 2\\paw\\proiect\\windows-app-project\\inventory management\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\operations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|solutionrelative:operations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89166A3C-74F3-4828-9040-1FA021D3877A}|Inventory management.csproj|solutionrelative:item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,9 +32,9 @@
               "RelativeDocumentMoniker": "addItemForm.cs",
               "ToolTip": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\addItemForm.cs",
               "RelativeToolTip": "addItemForm.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAYwDoAAAAJAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwDsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T16:09:15.219Z",
+              "WhenOpened": "2024-03-29T11:29:08.043Z",
               "EditorCaption": ""
             },
             {
@@ -62,60 +46,7 @@
               "ToolTip": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\addItemForm.cs [Design]",
               "RelativeToolTip": "addItemForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T16:09:12.506Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T16:06:34.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Operations.cs",
-              "DocumentMoniker": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Operations.cs",
-              "RelativeDocumentMoniker": "Operations.cs",
-              "ToolTip": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Operations.cs",
-              "RelativeToolTip": "Operations.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAIwBcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:37:01.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Item.cs",
-              "RelativeDocumentMoniker": "Item.cs",
-              "ToolTip": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Item.cs",
-              "RelativeToolTip": "Item.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAIwDkAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T12:26:14.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\corin\\Documents\\ASE\\An 2\\Semestrul 2\\PAW\\Proiect\\windows-app-project\\Inventory management\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T18:19:54.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-29T11:19:32.544Z"
             }
           ]
         }

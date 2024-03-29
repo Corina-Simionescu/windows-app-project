@@ -2,11 +2,11 @@ C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\In
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\bin\Debug\Inventory management.exe
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\bin\Debug\Inventory management.pdb
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.csproj.AssemblyReference.cache
+C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.addItemForm.resources
+C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.displayItemsForm.resources
+C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.Form1.resources
+C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.removeItemForm.resources
+C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.csproj.GenerateResource.cache
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.csproj.CoreCompileInputs.cache
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.exe
 C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.pdb
-C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.Form1.resources
-C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory management.csproj.GenerateResource.cache
-C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.addItemForm.resources
-C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.removeItemForm.resources
-C:\Users\corin\Documents\ASE\An 2\Semestrul 2\PAW\Proiect\windows-app-project\Inventory management\obj\Debug\Inventory_management.displayItemsForm.resources
