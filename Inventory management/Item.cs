@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inventory_management
 {
+    [Serializable]
     public class Item
     {
         private int id;

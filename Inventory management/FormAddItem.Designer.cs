@@ -1,6 +1,6 @@
 ﻿namespace Inventory_management
 {
-    partial class addItemForm
+    partial class FormAddItem
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(506, 17);
+            this.labelTitle.Location = new System.Drawing.Point(447, 35);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(436, 63);
@@ -61,7 +61,7 @@
             // 
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(442, 140);
+            this.labelId.Location = new System.Drawing.Point(307, 166);
             this.labelId.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(85, 48);
@@ -71,7 +71,7 @@
             // textBoxId
             // 
             this.textBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxId.Location = new System.Drawing.Point(826, 129);
+            this.textBoxId.Location = new System.Drawing.Point(691, 155);
             this.textBoxId.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(324, 55);
@@ -83,7 +83,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(442, 258);
+            this.labelName.Location = new System.Drawing.Point(307, 284);
             this.labelName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(164, 48);
@@ -93,7 +93,7 @@
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(826, 246);
+            this.textBoxName.Location = new System.Drawing.Point(691, 272);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(324, 55);
@@ -103,7 +103,7 @@
             // 
             this.labelPrice.AutoSize = true;
             this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice.Location = new System.Drawing.Point(442, 575);
+            this.labelPrice.Location = new System.Drawing.Point(307, 601);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(171, 48);
@@ -114,7 +114,7 @@
             // 
             this.labelQuantity.AutoSize = true;
             this.labelQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuantity.Location = new System.Drawing.Point(442, 471);
+            this.labelQuantity.Location = new System.Drawing.Point(307, 497);
             this.labelQuantity.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(256, 48);
@@ -125,7 +125,7 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescription.Location = new System.Drawing.Point(442, 363);
+            this.labelDescription.Location = new System.Drawing.Point(307, 389);
             this.labelDescription.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(330, 48);
@@ -135,7 +135,7 @@
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescription.Location = new System.Drawing.Point(826, 352);
+            this.textBoxDescription.Location = new System.Drawing.Point(691, 378);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(324, 55);
@@ -144,7 +144,7 @@
             // textBoxQuantity
             // 
             this.textBoxQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQuantity.Location = new System.Drawing.Point(826, 460);
+            this.textBoxQuantity.Location = new System.Drawing.Point(691, 486);
             this.textBoxQuantity.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(324, 55);
@@ -155,7 +155,7 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrice.Location = new System.Drawing.Point(826, 563);
+            this.textBoxPrice.Location = new System.Drawing.Point(691, 589);
             this.textBoxPrice.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(324, 55);
@@ -166,7 +166,7 @@
             // buttonAddItem
             // 
             this.buttonAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddItem.Location = new System.Drawing.Point(1292, 612);
+            this.buttonAddItem.Location = new System.Drawing.Point(1088, 623);
             this.buttonAddItem.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(224, 206);
@@ -178,7 +178,7 @@
             // buttonGoBackToForm1
             // 
             this.buttonGoBackToForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGoBackToForm1.Location = new System.Drawing.Point(24, 612);
+            this.buttonGoBackToForm1.Location = new System.Drawing.Point(4, 623);
             this.buttonGoBackToForm1.Margin = new System.Windows.Forms.Padding(6);
             this.buttonGoBackToForm1.Name = "buttonGoBackToForm1";
             this.buttonGoBackToForm1.Size = new System.Drawing.Size(224, 206);
@@ -191,11 +191,11 @@
             // 
             this.errorProviderFormAddItem.ContainerControl = this;
             // 
-            // addItemForm
+            // FormAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.buttonGoBackToForm1);
             this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.textBoxPrice);
@@ -210,7 +210,7 @@
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.labelTitle);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "addItemForm";
+            this.Name = "FormAddItem";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFormAddItem)).EndInit();
             this.ResumeLayout(false);

@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace Inventory_management
 {
-    public partial class Form1 : Form
+    [Serializable]
+    public partial class FormMainMenu : Form
     {
         public static List<Item> items = new List<Item>();
-        public Form1()
+        public FormMainMenu()
         {
             InitializeComponent();
         }
@@ -22,13 +23,13 @@ namespace Inventory_management
         {
             this.Hide();
 
-            addItemForm form = new addItemForm();
+            FormAddItem form = new FormAddItem();
                 form.ShowDialog();
         }
 
         private void buttonViewItems_Click(object sender, EventArgs e)
         {
-            displayItemsForm form = new displayItemsForm();
+            FormDisplayItems form = new FormDisplayItems();
             form.ShowDialog();
         }
 
@@ -36,7 +37,7 @@ namespace Inventory_management
         {
             this.Hide();
 
-            removeItemForm form = new removeItemForm();
+            FormRemoveItem form = new FormRemoveItem();
             form.ShowDialog();
         }
     }

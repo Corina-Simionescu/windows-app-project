@@ -1,6 +1,6 @@
 ﻿namespace Inventory_management
 {
-    partial class removeItemForm
+    partial class FormRemoveItem
     {
         /// <summary>
         /// Required designer variable.

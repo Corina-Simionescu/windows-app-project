@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Inventory_management
 {
-    public partial class removeItemForm : Form
+    public partial class FormRemoveItem : Form
     {
-        public removeItemForm()
+        public FormRemoveItem()
         {
             InitializeComponent();
         }
@@ -32,20 +32,20 @@ namespace Inventory_management
                 {
                     int id = Convert.ToInt32(textBoxId.Text);
 
-                    if (!Form1.items.Any())
+                    if (!FormMainMenu.items.Any())
                     {
                         MessageBox.Show("No item to remove because the inventory is empty");
                     }
                     else
                     {
                         int itemWasFound = 0;
-                        foreach (Item item in Form1.items)
+                        foreach (Item item in FormMainMenu.items)
                         {
                             if (id == item.Id)
                             {
                                 MessageBox.Show("The following item was removed from inventory: " + Environment.NewLine + item.ToString());
 
-                                Operations.removeItem(Form1.items, item);
+                                Operations.removeItem(FormMainMenu.items, item);
 
                                 itemWasFound++;
                                 break;
@@ -73,7 +73,7 @@ namespace Inventory_management
         {
             this.Hide();
 
-            Form1 form = new Form1();
+            FormMainMenu form = new FormMainMenu();
             form.ShowDialog();
         }
 

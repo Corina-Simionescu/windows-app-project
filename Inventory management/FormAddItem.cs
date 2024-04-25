@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Inventory_management
 {
-    public partial class addItemForm : Form
+    public partial class FormAddItem : Form
     {
-        public addItemForm()
+        public FormAddItem()
         {
             InitializeComponent();
         }
@@ -53,7 +53,7 @@ namespace Inventory_management
 
                     Item item = new Item(id, name, description, quantity, price);
 
-                    Operations.addItem(Form1.items, item);
+                    Operations.addItem(FormMainMenu.items, item);
 
                     MessageBox.Show(item.ToString());
                 }
@@ -76,7 +76,7 @@ namespace Inventory_management
         {
             this.Hide();
 
-            Form1 form1 = new Form1();
+            FormMainMenu form1 = new FormMainMenu();
             form1.ShowDialog();
         }
 
