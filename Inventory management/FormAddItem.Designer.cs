@@ -41,7 +41,6 @@
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.buttonAddItem = new System.Windows.Forms.Button();
-            this.buttonGoBackToForm1 = new System.Windows.Forms.Button();
             this.errorProviderFormAddItem = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFormAddItem)).BeginInit();
             this.SuspendLayout();
@@ -165,27 +164,16 @@
             // 
             // buttonAddItem
             // 
+            this.buttonAddItem.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddItem.Location = new System.Drawing.Point(1088, 623);
+            this.buttonAddItem.Location = new System.Drawing.Point(500, 699);
             this.buttonAddItem.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAddItem.Name = "buttonAddItem";
-            this.buttonAddItem.Size = new System.Drawing.Size(224, 206);
+            this.buttonAddItem.Size = new System.Drawing.Size(296, 122);
             this.buttonAddItem.TabIndex = 11;
             this.buttonAddItem.Text = "ADD";
             this.buttonAddItem.UseVisualStyleBackColor = true;
             this.buttonAddItem.Click += new System.EventHandler(this.buttonAddItem_Click);
-            // 
-            // buttonGoBackToForm1
-            // 
-            this.buttonGoBackToForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGoBackToForm1.Location = new System.Drawing.Point(4, 623);
-            this.buttonGoBackToForm1.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonGoBackToForm1.Name = "buttonGoBackToForm1";
-            this.buttonGoBackToForm1.Size = new System.Drawing.Size(224, 206);
-            this.buttonGoBackToForm1.TabIndex = 12;
-            this.buttonGoBackToForm1.Text = "GO BACK";
-            this.buttonGoBackToForm1.UseVisualStyleBackColor = true;
-            this.buttonGoBackToForm1.Click += new System.EventHandler(this.buttonGoBackToForm1_Click);
             // 
             // errorProviderFormAddItem
             // 
@@ -196,7 +184,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 900);
-            this.Controls.Add(this.buttonGoBackToForm1);
             this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxQuantity);
@@ -232,7 +219,6 @@
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Button buttonAddItem;
-        private System.Windows.Forms.Button buttonGoBackToForm1;
         private System.Windows.Forms.ErrorProvider errorProviderFormAddItem;
     }
 }

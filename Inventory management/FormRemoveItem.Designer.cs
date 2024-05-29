@@ -29,26 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelRemoveItemTitle = new System.Windows.Forms.Label();
+            this.labelRemovetemTitle = new System.Windows.Forms.Label();
             this.labelIndication = new System.Windows.Forms.Label();
             this.labelId = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
-            this.buttonRemove = new System.Windows.Forms.Button();
-            this.buttonGoBackToForm1 = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.errorProviderRemoveItemForm = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderRemoveItemForm)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelRemoveItemTitle
+            // labelRemovetemTitle
             // 
-            this.labelRemoveItemTitle.AutoSize = true;
-            this.labelRemoveItemTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRemoveItemTitle.Location = new System.Drawing.Point(530, 77);
-            this.labelRemoveItemTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelRemoveItemTitle.Name = "labelRemoveItemTitle";
-            this.labelRemoveItemTitle.Size = new System.Drawing.Size(415, 63);
-            this.labelRemoveItemTitle.TabIndex = 0;
-            this.labelRemoveItemTitle.Text = "REMOVE ITEM";
+            this.labelRemovetemTitle.AutoSize = true;
+            this.labelRemovetemTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRemovetemTitle.Location = new System.Drawing.Point(530, 77);
+            this.labelRemovetemTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelRemovetemTitle.Name = "labelRemovetemTitle";
+            this.labelRemovetemTitle.Size = new System.Drawing.Size(415, 63);
+            this.labelRemovetemTitle.TabIndex = 0;
+            this.labelRemovetemTitle.Text = "REMOVE ITEM";
             // 
             // labelIndication
             // 
@@ -82,47 +81,35 @@
             this.textBoxId.TabIndex = 3;
             this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxId_KeyPress);
             // 
-            // buttonRemove
+            // buttonDelete
             // 
-            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemove.Location = new System.Drawing.Point(588, 433);
-            this.buttonRemove.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(286, 77);
-            this.buttonRemove.TabIndex = 4;
-            this.buttonRemove.Text = "REMOVE";
-            this.buttonRemove.UseVisualStyleBackColor = true;
-            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
-            // 
-            // buttonGoBackToForm1
-            // 
-            this.buttonGoBackToForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGoBackToForm1.Location = new System.Drawing.Point(78, 613);
-            this.buttonGoBackToForm1.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonGoBackToForm1.Name = "buttonGoBackToForm1";
-            this.buttonGoBackToForm1.Size = new System.Drawing.Size(228, 181);
-            this.buttonGoBackToForm1.TabIndex = 5;
-            this.buttonGoBackToForm1.Text = "GO BACK";
-            this.buttonGoBackToForm1.UseVisualStyleBackColor = true;
-            this.buttonGoBackToForm1.Click += new System.EventHandler(this.buttonGoBackToForm1_Click);
+            this.buttonDelete.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(588, 433);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(286, 77);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "REMOVE";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // errorProviderRemoveItemForm
             // 
             this.errorProviderRemoveItemForm.ContainerControl = this;
             // 
-            // removeItemForm
+            // FormRemoveItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 865);
-            this.Controls.Add(this.buttonGoBackToForm1);
-            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.labelIndication);
-            this.Controls.Add(this.labelRemoveItemTitle);
+            this.Controls.Add(this.labelRemovetemTitle);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "removeItemForm";
+            this.Name = "FormRemoveItem";
             this.Text = "removeItemForm";
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderRemoveItemForm)).EndInit();
             this.ResumeLayout(false);
@@ -132,12 +119,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelRemoveItemTitle;
+        private System.Windows.Forms.Label labelRemovetemTitle;
         private System.Windows.Forms.Label labelIndication;
         private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.Button buttonRemove;
-        private System.Windows.Forms.Button buttonGoBackToForm1;
+        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.ErrorProvider errorProviderRemoveItemForm;
     }
 }

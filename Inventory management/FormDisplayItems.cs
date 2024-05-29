@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,9 @@ namespace Inventory_management
 {
     public partial class FormDisplayItems : Form
     {
+        public List<Item> items = new List<Item>();
+        public Dictionary<int, int> itemsValues = new Dictionary<int, int>();
+
         int[] quantities = new int[30];
         int numberOfElements = 0;
         bool quantityExists = false;
@@ -23,16 +28,19 @@ namespace Inventory_management
         Graphics graphics;
         const int edge = 10;
 
+        string connectionString;
+
         public FormDisplayItems()
         {
             InitializeComponent();
-            DisplayItems();
+
+            connectionString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ItemsDatabase.accdb";
         }
 
         public void DisplayItems()
         {
             listViewItems.Items.Clear();
-            foreach (Item item in FormMainMenu.items)
+            foreach (Item item in items)
             {
                 ListViewItem listViewItem = new ListViewItem(item.Id.ToString());
                 listViewItem.SubItems.Add(item.Name);
@@ -47,12 +55,12 @@ namespace Inventory_management
         private void serializeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                using(FileStream fileStream = File.Create(saveFileDialog.FileName))
+                using (FileStream fileStream = File.Create(saveFileDialog.FileName))
                 {
                     BinaryFormatter binaryFormatter = new BinaryFormatter();
-                    binaryFormatter.Serialize(fileStream, FormMainMenu.items);
+                    binaryFormatter.Serialize(fileStream, items);
                 }
             }
         }
@@ -60,13 +68,13 @@ namespace Inventory_management
         private void deserializeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 using (FileStream fileStream = File.OpenRead(openFileDialog.FileName))
                 {
                     BinaryFormatter binaryFormatter = new BinaryFormatter();
-                    FormMainMenu.items = (List<Item>) binaryFormatter.Deserialize(fileStream);
-                    
+                    items = (List<Item>)binaryFormatter.Deserialize(fileStream);
+
                     DisplayItems();
                 }
             }
@@ -80,7 +88,7 @@ namespace Inventory_management
                 using (FileStream fileStream = File.Create(saveFileDialog.FileName))
                 {
                     BinaryFormatter binaryFormatter = new BinaryFormatter();
-                    binaryFormatter.Serialize(fileStream, FormMainMenu.items);
+                    binaryFormatter.Serialize(fileStream, items);
                 }
             }
         }
@@ -93,7 +101,7 @@ namespace Inventory_management
                 using (FileStream fileStream = File.OpenRead(openFileDialog.FileName))
                 {
                     BinaryFormatter binaryFormatter = new BinaryFormatter();
-                    FormMainMenu.items = (List<Item>)binaryFormatter.Deserialize(fileStream);
+                    items = (List<Item>)binaryFormatter.Deserialize(fileStream);
 
                     DisplayItems();
                 }
@@ -111,13 +119,12 @@ namespace Inventory_management
 
         private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Item item in FormMainMenu.items) 
+            foreach (Item item in items)
             {
                 quantities[numberOfElements] = Convert.ToInt32(item.Quantity);
                 numberOfElements++;
                 quantityExists = true;
             }
-            listViewItems.Visible = false;
             panelStatistics.Visible = true;
             panelStatistics.Invalidate();
         }
@@ -126,7 +133,7 @@ namespace Inventory_management
         {
             graphics = e.Graphics;
 
-            if(quantityExists==true)
+            if (quantityExists == true)
             {
                 Rectangle rec = new Rectangle(panelStatistics.ClientRectangle.X + edge,
                     panelStatistics.ClientRectangle.Y + 2 * edge,
@@ -142,13 +149,13 @@ namespace Inventory_management
                 Brush br = new SolidBrush(Color.Black);
 
                 Rectangle[] rectangles = new Rectangle[numberOfElements];
-                for (int i = 0; i < numberOfElements; i++) 
+                for (int i = 0; i < numberOfElements; i++)
                 {
                     rectangles[i] = new Rectangle((int)(rec.Location.X + (i + 1) * distance + i * width),
                         (int)(rec.Location.Y + rec.Height - rec.Height / vMax * quantities[i]),
                         (int)width,
                         (int)(rec.Height / vMax * quantities[i]));
-                
+
                     graphics.DrawString(quantities[i].ToString(), this.Font,
                         br, new Point((int)(rectangles[i].Location.X + width / 2),
                         (int)(rectangles[i].Location.Y - this.Font.Height)));
@@ -188,7 +195,7 @@ namespace Inventory_management
                         (int)(rec.Location.Y + rec.Height - rec.Height / vMax * quantities[i]),
                         (int)latime,
                         (int)(rec.Height / vMax * quantities[i]));
-                
+
                     graphics.DrawString(quantities[i].ToString(), this.Font,
                         br, new Point((int)(recs[i].Location.X + latime / 2),
                         (int)(recs[i].Location.Y - this.Font.Height)));
@@ -209,6 +216,122 @@ namespace Inventory_management
             PrintPreviewDialog dialog = new PrintPreviewDialog();
             dialog.Document = printDocument;
             dialog.ShowDialog();
+        }
+
+        private void buttonAddNewItem_Click(object sender, EventArgs e)
+        {
+            FormAddItem form = new FormAddItem(items);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                DisplayItems();
+            }
+        }
+
+        private void buttonRemoveItem_Click(object sender, EventArgs e)
+        {
+            FormRemoveItem form = new FormRemoveItem(items);
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                DisplayItems();
+            }
+        }
+
+        private void uploadFromDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OleDbConnection oleDbConnection = new OleDbConnection(connectionString);
+
+            try
+            {
+                oleDbConnection.Open();
+
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = oleDbConnection;
+                command.CommandText = "SELECT * FROM Items";
+
+                OleDbDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["itemID"]);
+                    string name = reader["itemName"].ToString();
+                    string description = reader["itemDescription"].ToString();
+                    int quantity = Convert.ToInt32(reader["itemQuantity"]);
+                    int price = Convert.ToInt32(reader["itemPrice"]);
+
+                    Item item = new Item(id, name, description, quantity, price);
+                    items.Add(item);
+
+                    ListViewItem listViewItem = new ListViewItem(item.Id.ToString());
+                    listViewItem.SubItems.Add(item.Name.ToString());
+                    listViewItem.SubItems.Add(item.Description.ToString());
+                    listViewItem.SubItems.Add(item.Quantity.ToString());
+                    listViewItem.SubItems.Add(item.Price.ToString());
+
+                    listViewItems.Items.Add(listViewItem);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter("SELECT * FROM Items", oleDbConnection);
+            DataSet dataSet = new DataSet();
+            oleDbDataAdapter.Fill(dataSet, "Items");
+
+            DataTable table = dataSet.Tables["Items"];
+        }
+
+        private void saveItemsValuesToFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                {
+                    foreach (Item item in items)
+                    {
+                        int value = item.Quantity * item.Price;
+                        writer.WriteLine($"{item.Id} {value}");
+                    }
+                }
+            }
+        }
+
+        private void uploadItemsValuesFromFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader reader = new StreamReader(openFileDialog.FileName))
+                {
+                    listViewItemValue.Items.Clear();
+
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split(' ');
+                        if (parts.Length == 2)
+                        {
+                            int id = Convert.ToInt32(parts[0]);
+                            int value = Convert.ToInt32(parts[1]);
+
+                            itemsValues[id] = value;
+
+                            ListViewItem listViewItem = new ListViewItem(id.ToString());
+                            listViewItem.SubItems.Add(value.ToString());
+
+                            listViewItemValue.Items.Add(listViewItem);
+                        }
+                    }
+                }
+            }
         }
     }
 }

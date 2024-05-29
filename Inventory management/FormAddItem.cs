@@ -12,9 +12,11 @@ namespace Inventory_management
 {
     public partial class FormAddItem : Form
     {
-        public FormAddItem()
+        private List<Item> items = new List<Item>();
+        public FormAddItem(List<Item> items)
         {
             InitializeComponent();
+            this.items = items;
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
@@ -53,7 +55,7 @@ namespace Inventory_management
 
                     Item item = new Item(id, name, description, quantity, price);
 
-                    Operations.addItem(FormMainMenu.items, item);
+                    Operations.addItem(items, item);
 
                     MessageBox.Show(item.ToString());
                 }
@@ -70,14 +72,6 @@ namespace Inventory_management
                     textBoxPrice.Clear();
                 }
             }
-        }
-
-        private void buttonGoBackToForm1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            FormMainMenu form1 = new FormMainMenu();
-            form1.ShowDialog();
         }
 
         private void textBoxIdQuantityPrice_KeyPress(object sender, KeyPressEventArgs e)

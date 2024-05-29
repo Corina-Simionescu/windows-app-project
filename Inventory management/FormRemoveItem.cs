@@ -13,9 +13,11 @@ namespace Inventory_management
 {
     public partial class FormRemoveItem : Form
     {
-        public FormRemoveItem()
+        private List<Item> items;
+        public FormRemoveItem(List<Item> items)
         {
             InitializeComponent();
+            this.items = items;
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
@@ -32,20 +34,20 @@ namespace Inventory_management
                 {
                     int id = Convert.ToInt32(textBoxId.Text);
 
-                    if (!FormMainMenu.items.Any())
+                    if (!items.Any())
                     {
                         MessageBox.Show("No item to remove because the inventory is empty");
                     }
                     else
                     {
                         int itemWasFound = 0;
-                        foreach (Item item in FormMainMenu.items)
+                        foreach (Item item in items)
                         {
                             if (id == item.Id)
                             {
                                 MessageBox.Show("The following item was removed from inventory: " + Environment.NewLine + item.ToString());
 
-                                Operations.removeItem(FormMainMenu.items, item);
+                                Operations.removeItem(items, item);
 
                                 itemWasFound++;
                                 break;
@@ -67,14 +69,6 @@ namespace Inventory_management
                     textBoxId.Clear();
                 }
             }
-        }
-
-        private void buttonGoBackToForm1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            FormMainMenu form = new FormMainMenu();
-            form.ShowDialog();
         }
 
         private void textBoxId_KeyPress(object sender, KeyPressEventArgs e)
