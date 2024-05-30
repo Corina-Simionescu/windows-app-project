@@ -141,7 +141,7 @@
             this.databaseToolStripMenuItem});
             this.menuStripFormDisplayItems.Location = new System.Drawing.Point(0, 0);
             this.menuStripFormDisplayItems.Name = "menuStripFormDisplayItems";
-            this.menuStripFormDisplayItems.Size = new System.Drawing.Size(2254, 40);
+            this.menuStripFormDisplayItems.Size = new System.Drawing.Size(2254, 42);
             this.menuStripFormDisplayItems.TabIndex = 1;
             this.menuStripFormDisplayItems.Text = "menuStrip1";
             // 
@@ -202,13 +202,15 @@
             // statisticsToolStripMenuItem
             // 
             this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
-            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(125, 36);
+            this.statisticsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(125, 38);
             this.statisticsToolStripMenuItem.Text = "Statistics";
             this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
             // 
             // printPreviewToolStripMenuItem
             // 
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
+            this.printPreviewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(173, 36);
             this.printPreviewToolStripMenuItem.Text = "Print preview";
             this.printPreviewToolStripMenuItem.Click += new System.EventHandler(this.printPreviewToolStripMenuItem_Click);
@@ -218,7 +220,7 @@
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uploadFromDatabaseToolStripMenuItem});
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
-            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(132, 38);
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(132, 36);
             this.databaseToolStripMenuItem.Text = "Database";
             // 
             // uploadFromDatabaseToolStripMenuItem
